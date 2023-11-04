@@ -1,0 +1,58 @@
+
+package salary;
+
+
+
+   public class Employee {
+    private String firstName;
+    private String lastName;
+    private double monthlySalary;
+
+    public Employee(String firstName, String lastName, double monthlySalary) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+
+        if (monthlySalary > 0) {
+            this.monthlySalary = monthlySalary;
+        } else {
+            this.monthlySalary = 0.0; 
+        }
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public double getMonthlySalary() {
+        return monthlySalary;
+    }
+    public void setEmployeeInfo(String firstName, String lastName, double monthlySalary) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+
+        if (monthlySalary > 0) {
+            this.monthlySalary = monthlySalary;
+        } else {
+            this.monthlySalary = 0.0; // Default to 0 if salary is not positive
+        }
+    }
+
+
+    public double getYearlySalary() {
+        return monthlySalary * 12;
+    }
+
+    public void applyRaise(double percentage) {
+        double raiseAmount = monthlySalary * percentage / 100;
+        monthlySalary += raiseAmount;
+    }
+}
+
+
+
+
+
