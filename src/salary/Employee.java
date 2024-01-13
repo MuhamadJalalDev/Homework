@@ -37,7 +37,7 @@ package salary;
         if (monthlySalary > 0) {
             this.monthlySalary = monthlySalary;
         } else {
-            this.monthlySalary = 0.0; // Default to 0 if salary is not positive
+            this.monthlySalary = 0.0; 
         }
     }
 
